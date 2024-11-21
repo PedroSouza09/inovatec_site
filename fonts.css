@@ -1,0 +1,78 @@
+
+
+@font-face {
+    font-family: 'vogue';
+    src: url('../fonts/Vogue.ttf') format('woff2'),
+         url('../fonts/Vogue.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+ 
+ }
+ 
+ 
+ 
+ 
+ @font-face {
+   font-family: 'chen';
+   src: url('../fonts/Chentalle.otf') format('woff2'),
+        url('../fonts/Chentalle.otf') format('woff');
+   font-weight: normal;
+   font-style: normal;
+ 
+ }
+ 
+ 
+ @font-face {
+   font-family: 'roma';
+   src: url('../fonts/RomauntGaolines.ttf') format('woff2'),
+        url('../fonts/RomauntGaolines.ttf') format('woff');
+   font-weight: normal;
+   font-style: normal;
+ 
+ }
+ 
+ 
+ @font-face {
+   font-family: 'lemon';
+   src: url('../fonts/LEMONMILK-Bold.otf') format('woff2'),
+        url('../fonts/LEMONMILK-Bold.otf') format('woff');
+   font-weight: normal;
+   font-style: normal;
+ 
+ }
+ 
+ @font-face {
+   font-family: 'manu';
+   src: url('../fonts/The\ Bride\ in\ Hacienda.ttf') format('woff2'),
+        url('../fonts/The\ Bride\ in\ Hacienda.ttf') format('woff');
+   font-weight: normal;
+   font-style: normal;
+ 
+ }
+ 
+ @font-face {
+   font-family: 'ama';
+   src: url('../fonts/Amarillo.ttf') format('woff2'),
+        url('../fonts/Amarillo.ttf') format('woff');
+   font-weight: normal;
+   font-style: normal;
+ 
+ }
+
+ @font-face {
+    font-family: 'fute';
+    src: url('../fonts/FuturisticYourself.ttf') format('woff2'),
+         url('../fonts/FuturisticYourself.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+ 
+  @font-face {
+    font-family: 'livi';
+    src: url('../fonts/Livia Medium.ttf') format('woff2'),
+         url('../fonts/Livia Medium.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }

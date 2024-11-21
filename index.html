@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./fonts.css" />
+  <link rel="shortcut icon" href="./assets/teste4.png" type="image/x-icon" />
+  <title>Trash Tech</title>
+</head>
+
+<body>
+  <!-- Sidebar/menu -->
+  <nav class="nav-open w3-sidebar w3-bar-block w3-green w3-animate-right w3-top w3-text-light-grey w3-large"
+    id="mySidebar">
+    <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">FECHA</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">HOME</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">SOBRE</a>
+    <a href="#points" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">COLETA</a>
+    <a href="#routes" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ROTAS E HORÁRIOS</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTATO</a>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <div class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+    <span class="w3-left w3-padding"><strong class="clr1">TRASH</strong>
+      <span class="clr2">TECH</span></span>
+    <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+  </div>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="nav-btn w3-overlay w3-animate-opacity" onclick="w3_close()" title="close side menu" id="myOverlay"></div>
+
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag text-small">Gestão inteligente de coleta de resíduos</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="text-header w3-text-blak">Bem-vindo ao Trash Tech:<br />a solução inteligente para um mundo
+        mais limpo e sustentável!</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-black text-selo">Inova Tech - 2024</span>
+    </div>
+  </header>
+
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-white w3-large">
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+      <div class="box-about w3-content">
+        <h5 class="w3-center w3-padding-64">
+          <span class="w3-tag w3-wide">SOBRE O PROJETO</span>
+        </h5>
+        <div  data-aos="fade-up" class="text-p">
+          <p>
+            O objetivo principal deste trabalho é desenvolver um sistema de gestão inteligente para resíduos urbanos,
+            utilizando a inteligência artificial com o intuito melhorar a eficiência dos processos de coleta reduzir o
+            desperdício e minimizar os impactos ambientais nas áreas urbanas.
+          </p>
+          <p>
+            Utilizando soluções como sensores para monitoramento de lixeiras, sistemas de logística inteligente para
+            rotas de coleta,
+            e a promoção da reciclagem e compostagem.
+          </p>
+          <p>
+            Essa abordagem também busca a conscientização e participação ativa da população, além de incentivar a
+            economia circular,
+            onde os resíduos são transformados em novos recursos, minimizando o desperdício e a poluição.
+          </p>
+        </div>
+        <div  data-aos="fade-right" class="w3-panel w3-leftbar w3-light-grey">
+          <p>
+            <i>"O lixo que descartamos hoje, é o reflexo do cuidado que teremos com o mundo amanhã."</i>
+          </p>
+          <p>Representante: Mikaellen Cavalcante</p>
+        </div>
+        <img  data-aos="fade-left" src="./assets/imgrelatorio.png" class="img-about w3-margin-top" />
+
+        <!-- Menu Container -->
+        <div class="w3-container" id="points">
+          <div class="w3-content" style="max-width: 700px">
+            <h5 class="w3-center w3-padding-48">
+              <span class="w3-tag w3-wide">Pontos de coleta</span>
+            </h5>
+
+            <div class="w3-row w3-center w3-card w3-padding">
+              <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+                <div class="w3-col s6 tablink">Resíduos Eletrônicos</div>
+              </a>
+              <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                <div class="w3-col s6 tablink">Resíduos Sólidos Urbanos</div>
+              </a>
+            </div>
+
+            <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+              <h5 class="w3-center">
+                Produtos eletrônicos que estão fora de uso e precisam de descarte
+                adequado devido aos materiais perigosos que podem conter.
+              </h5>
+              <p class="w3-center w3-text-grey">
+                <strong>Exemplos</strong>: Computadores, smartphones,
+                eletrodomésticos.
+              </p>
+              <br />
+
+              <h5>EcoPonto Eletrônico</h5>
+              <p class="w3-text-grey">
+                Centro, Av. São João, 100 | Segunda a Sexta, das 9h às 17h
+              </p>
+              <br />
+
+              <h5>Coleta Verde</h5>
+              <p class="w3-text-grey">
+                Vila Esperança, Rua da Esperança, 100 | Segunda a Sábado, das 7h
+                às 15h
+              </p>
+              <br />
+
+              <h5>TechRecycle</h5>
+              <p class="w3-text-grey">
+                Vila Nova, Rua das Flores, 45 | Terça a Sábado, das 10h às 18h
+              </p>
+              <br />
+
+              <h5>Ponto Limpo</h5>
+              <p class="w3-text-grey">
+                Jardim das Palmeiras, Rua das Palmeiras, 55 | Terça a Domingo, das
+                9h às 17h
+              </p>
+            </div>
+
+            <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+              <h5 class="w3-center">
+                São materiais gerados em obras e reformas que precisam de
+                destinação adequada, incluindo inertes, recicláveis e perigosos.
+              </h5>
+              <p class="w3-center w3-text-grey">
+                <strong>Exemplos</strong>: Tijolos, concreto, madeira, metais,
+                telhas, móveis(sofás, mesas, cadeiras, estantes, etc).
+              </p>
+              <br />
+
+              <h5>Recolhe & Recicla</h5>
+              <p class="w3-text-grey">
+                Santo André, Rua dos Jacarandás, 33 | Segunda a Sexta, das 8h às
+                16h
+              </p>
+              <br />
+
+              <h5>Descarte Seguro</h5>
+              <p class="w3-text-grey">
+                Bairro Alto, Rua dos Limoeiros, 89 | Segunda a Sexta, das 8h às
+                14h
+              </p>
+              <br />
+
+              <h5>Verde Urbano</h5>
+              <p class="w3-text-grey">
+                Cidade Alta, Av. da Liberdade, 200 | Quarta a Sábado, das 10h às
+                18h
+              </p>
+              <br />
+
+              <h5>Lixo Zero</h5>
+              <p class="w3-text-grey">
+                São Miguel, Rua do Sol, 99 | Segunda a Domingo, das 9h às 15h
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact/Area Container -->
+        <div class="w3-container" id="routes">
+          <div class="w3-content" style="max-width: 700px">
+            <h5 class="w3-center w3-padding-48">
+              <span class="w3-tag w3-wide">Rotas e Horários</span>
+            </h5>
+            <p>
+              Veja as rotas e os hórarios que o caminhão de lixo vai passa na sua
+              rua.
+            </p>
+            <iframe
+              src="https://www.google.com/maps/d/u/0/embed?mid=1SyIeqNTTFrp_XO49-ePA4--PI_ltMTY&ehbc=2E312F&noprof=1"
+              width="100%" height="450" style="border: 0; border-radius: 15px;" allowfullscreen="" loading=" lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>
+              <span class="w3-tag">Para sua informação!</span> Os pontos "VERMELHOS" indicam o "BAIRRO 1", os pontos
+              marcardos em "VERDE" indicam o "BAIRRO 2" e os pontos pretos indicam o "BAIRRO 3".
+            </p>
+            <!-- rota -->
+            <h5 class="w3-center w3-padding-48">
+            <span class="w3-tag w3-wide texto" style="margin-bottom: 16px;">Horários de coleta nos bairros
+              🚛</span>
+            </h5>
+            <div class="w3-center" style="display: flex; flex-direction: column;">
+              <div class="buton">
+                <button class="but" id="open-modal1" class="open" style="margin-bottom: 16px;">Bairro 1</button>
+              </div>
+              <div class="buton">
+                <button class="but" id="open-modal2" class="open" style="margin-bottom: 16px;">Bairro 2</button>
+              </div>
+              <div class="buton">
+                <button class="but" id="open-modal3" class="open" style="margin-bottom: 16px;">Bairro 3</button>
+              </div>
+            </div>
+          </div>
+          <div id="fade" class="hide"></div>
+          <div id="modal1" class="hide">
+            <div class="modal-header">
+              <h3>Rota do bairro 1</h3>
+              <button class="close" id="close-modal1">Fechar</button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Rota 1: Av. São Jorge, 786 até Avenida São Jorge (Zona Oeste de Manaus) | Segunda à Sexta, das 21h - 5h;
+                Sábado e Domingo, das
+                9h - 12h
+              </p>
+              <div style="display: flex; align-items: center; justify-content: center;">
+                <iframe
+                  src="https://www.google.com/maps/d/u/0/embed?mid=11iF1M6vERYjPVWc440uJPeT_V3DqiqA&ehbc=2E312F&noprof=1"
+                  width="450" height="300" style="border-radius: 10px; border: 0;"></iframe>
+              </div>
+            </div>
+          </div>
+          <div id="modal2" class="hide">
+            <div class="modal-header">
+              <h3>Rota do bairro 2</h3>
+              <button class="close" id="close-modal2">Fechar</button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Rota 2: Avenida Constantino Nery até Evandro Andaimes (Zona Oeste de Manaus) | Segunda à Sexta, das 21h
+                - 5h; Sábado e Domingo, das
+                9h - 12h
+              </p>
+              <div style="display: flex; align-items: center; justify-content: center;">
+                <iframe
+                  src="https://www.google.com/maps/d/u/0/embed?mid=1kFQbOslfbZuPwhePSfjJ0LrikDFc00Y&ehbc=2E312F&noprof=1"
+                  width="450" height="300" style="border-radius: 10px; border: 0;"></iframe>
+              </div>
+            </div>
+          </div>
+          <div id="modal3" class="hide">
+            <div class="modal-header">
+              <h3>Rota do bairro 3</h3>
+              <button class="close" id="close-modal3">Fechar</button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Rota 3: Rua Major Gabriel até Hospital Samel - Av. Joaquim Nabuco (Zona Sul de Manaus) | Segunda à
+                Sexta, das 21h - 5h; Sábado e
+                Domingo, das 9h - 12h
+              </p>
+              <div style="display: flex; align-items: center; justify-content: center;">
+                <iframe
+                  src="https://www.google.com/maps/d/u/0/embed?mid=14FF4ZC6KSiUmuxeNcyy4WkM2CbOUPiI&ehbc=2E312F&noprof=1"
+                  width="450" height="300" style="border-radius: 10px; border: 0;"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Contact/Area Container -->
+        <div class="w3-container" id="contact" style="padding-bottom: 32px">
+          <div class="w3-content" style="max-width: 700px">
+            <h5 class="w3-center w3-padding-48">
+              <span class="w3-tag w3-wide">CONTATE-NOS</span>
+            </h5>
+            <p>Compartilhe suas sugestões para aprimorarmos ainda mais.</p>
+            <div class="nsq w3-center">
+              <img data-aos="fade-up" src="./assets/teste7.png" class="w3-image w3-center" style="width: 50%" />
+            </div>
+            <p><strong>Envie-nos</strong> uma mensagem:</p>
+            <form action="/action_page.php" target="_blank">
+              <p>
+                <input id="name" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Name" />
+              </p>
+              <p>
+                <input id="message" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensagem de sugestões" required
+                  name="Message" />
+              </p>
+              <p>
+                <button id="checkout-btn" onclick="enviarFormulario()" class="w3-button w3-black" type="button">
+                  ENVIAR MENSAGEM
+                </button>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- End page content -->
+      </div>
+
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-64 w3-center w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <div class="foot">
+          <p class="w3-medium ">
+            Authored by <a class="link-footer" href="#" target="_blank">Trash_Tech</a>
+          </p>
+        </div>
+      </footer>
+
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      
+      <script src="./script.js"></script>
+</body>
+
+</html>
