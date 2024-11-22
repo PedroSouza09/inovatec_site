@@ -10,8 +10,6 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./fonts.css" />
   <link rel="shortcut icon" href="./assets/teste4.png" type="image/x-icon" />
@@ -46,11 +44,11 @@
       <span class="w3-tag text-small">Gestão inteligente de coleta de resíduos</span>
     </div>
     <div class="w3-display-middle w3-center">
-      <span class="text-header w3-text-blak">Bem-vindo ao Trash Tech:<br />a solução inteligente para um mundo
-        mais limpo e sustentável!</span>
+      <span class="title-h text-header w3-text-black">Bem-vindo ao Smart Trash:<br /> gestão inteligente de resíduos!
+        <br />♻</span>
     </div>
     <div class="w3-display-bottomright w3-center w3-padding-large">
-      <span class="w3-text-black text-selo">Inova Tech - 2024</span>
+      <span class="w3-tag w3-text-blck text-selo">InovaTech - 2024</span>
     </div>
   </header>
 
@@ -62,7 +60,7 @@
         <h5 class="w3-center w3-padding-64">
           <span class="w3-tag w3-wide">SOBRE O PROJETO</span>
         </h5>
-        <div  data-aos="fade-up" class="text-p">
+        <div class="text-p">
           <p>
             O objetivo principal deste trabalho é desenvolver um sistema de gestão inteligente para resíduos urbanos,
             utilizando a inteligência artificial com o intuito melhorar a eficiência dos processos de coleta reduzir o
@@ -79,13 +77,13 @@
             onde os resíduos são transformados em novos recursos, minimizando o desperdício e a poluição.
           </p>
         </div>
-        <div  data-aos="fade-right" class="w3-panel w3-leftbar w3-light-grey">
+        <div class="w3-panel w3-leftbar w3-light-grey">
           <p>
             <i>"O lixo que descartamos hoje, é o reflexo do cuidado que teremos com o mundo amanhã."</i>
           </p>
           <p>Representante: Mikaellen Cavalcante</p>
         </div>
-        <img  data-aos="fade-left" src="./assets/imgrelatorio.png" class="img-about w3-margin-top" />
+        <img src="./assets/imgrelatorio.png" class="img-about w3-margin-top" />
 
         <!-- Menu Container -->
         <div class="w3-container" id="points">
@@ -199,10 +197,8 @@
               marcardos em "VERDE" indicam o "BAIRRO 2" e os pontos pretos indicam o "BAIRRO 3".
             </p>
             <!-- rota -->
-            <h5 class="w3-center w3-padding-48">
-            <span class="w3-tag w3-wide texto" style="margin-bottom: 16px;">Horários de coleta nos bairros
+            <span class="w3-tag w3-wide w3-center texto" style="margin-bottom: 16px;">Horários de coleta nos bairros
               🚛</span>
-            </h5>
             <div class="w3-center" style="display: flex; flex-direction: column;">
               <div class="buton">
                 <button class="but" id="open-modal1" class="open" style="margin-bottom: 16px;">Bairro 1</button>
@@ -282,19 +278,20 @@
             </h5>
             <p>Compartilhe suas sugestões para aprimorarmos ainda mais.</p>
             <div class="nsq w3-center">
-              <img data-aos="fade-up" src="./assets/teste7.png" class="w3-image w3-center" style="width: 50%" />
+              <img src="./assets/teste7.png" class="w3-image w3-center" style="width: 50%" />
             </div>
             <p><strong>Envie-nos</strong> uma mensagem:</p>
             <form action="/action_page.php" target="_blank">
               <p>
-                <input id="name" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Name" />
+                <input id="name-input" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required
+                  name="Name" />
               </p>
               <p>
-                <input id="message" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensagem de sugestões" required
-                  name="Message" />
+                <input id="message-input" class="w3-input w3-padding-16 w3-border" type="text"
+                  placeholder="Mensagem de sugestões" required name="Message" />
               </p>
               <p>
-                <button id="checkout-btn" onclick="enviarFormulario()" class="w3-button w3-black" type="button">
+                <button onclick="enviarFormulario()" id="checkout-btn" class="w3-button w3-black" type="button">
                   ENVIAR MENSAGEM
                 </button>
               </p>
@@ -307,12 +304,25 @@
 
       <!-- Footer -->
       <footer class="w3-container w3-padding-64 w3-center w3-light-grey w3-xlarge">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <a class="link-icon" target="_blank" href="https://www.facebook.com/">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        </a>
+        <a class="link-icon" target="_blank" href="https://www.instagram.com/">
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+        </a>
+        <a class="link-icon" target="_blank" href="https://www.snapchat.com/">
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+        </a>
+        <a class="link-icon" target="_blank" href="https://br.pinterest.com/">
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        </a>
+        <a class="link-icon" target="_blank" href="https://x.com/">
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+        </a>
+        <a class="link-icon" target="_blank" href="https://br.linkedin.com/">
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </a>
+
         <div class="foot">
           <p class="w3-medium ">
             Authored by <a class="link-footer" href="#" target="_blank">Trash_Tech</a>
@@ -321,7 +331,6 @@
       </footer>
 
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-      
       <script src="./script.js"></script>
 </body>
 

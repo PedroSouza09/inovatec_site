@@ -1,58 +1,56 @@
-AOS.init();
-
 // Tabbed Menu
 function openMenu(evt, menuName) {
-    var i, x, tablinks
-    x = document.getElementsByClassName('menu')
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none'
-    }
-    tablinks = document.getElementsByClassName('tablink')
-    for (i = 0; i < x.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(' w3-dark-grey', '')
-    }
-    document.getElementById(menuName).style.display = 'block'
-    evt.currentTarget.firstElementChild.className += ' w3-dark-grey'
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
-  document.getElementById('myLink').click()
-  
-  // Script to open and close sidebar
-  function w3_open() {
-    document.getElementById('mySidebar').style.display = 'block'
-    document.getElementById('myOverlay').style.display = 'block'
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
   }
-  
-  function w3_close() {
-    document.getElementById('mySidebar').style.display = 'none'
-    document.getElementById('myOverlay').style.display = 'none'
-  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
 
-  // mensagem 
-const checkoutBtn = document.getElementById('checkout-btn')
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
 
-checkoutBtn.addEventListener('click', function () {
-    Toastify({
-      text: 'Agradecemos pela sua sugestão!',
-      duration: 3000,
-      close: true,
-      gravity: 'top',
-      position: 'right',
-      stopOnFocus: true,
-      style: {
-        background: '#54c67a'
-      }
-    }).showToast()
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
 
-    return
-  })
+// mensagem
+const checkoutBtn = document.getElementById("checkout-btn");
+
+checkoutBtn.addEventListener("click", function () {
+  Toastify({
+    text: "Agradecemos pela sua sugestão!",
+    duration: 3000,
+    close: true,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "#54c67a",
+    },
+  }).showToast();
+
+  return;
+});
 
 function enviarFormulario() {
   // Lógica de envio do formulário (exemplo de mensagem no console)
   console.log("Formulário enviado!");
 
   // Limpa o campo de entrada
-  document.getElementById("name").value = "";
-  document.getElementById("message").value = "";
+  document.getElementById("name-input").value = "";
+  document.getElementById("message-input").value = "";
 }
 
 const openModalButton1 = document.querySelector("#open-modal1");
