@@ -303,6 +303,19 @@ h3 {
   text-decoration: none;
 }
 
+.h4tips {
+  font-weight: 700;
+}
+
+.tips {
+  background-color: #54c67a;
+  /* background-color: #888; */
+  border: 5px solid #000;
+  /* border: 5px solid #54c67a; */
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 430px) {
   .title-h {
     font-size: 1.7rem;
