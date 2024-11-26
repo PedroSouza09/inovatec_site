@@ -45,10 +45,16 @@ checkoutBtn.addEventListener("click", function () {
 });
 
 function enviarFormulario() {
-  // Lógica de envio do formulário (exemplo de mensagem no console)
-  console.log("Formulário enviado!");
+  // Captura os valores dos campos
+  const nome = document.getElementById("name-input").value;
+  const mensagem = document.getElementById("message-input").value;
 
-  // Limpa o campo de entrada
+  // Exibe os dados no console
+  console.log("Formulário enviado!");
+  console.log("Nome:", nome);
+  console.log("Mensagem:", mensagem);
+
+  // Limpa os campos de entrada
   document.getElementById("name-input").value = "";
   document.getElementById("message-input").value = "";
 }
@@ -91,3 +97,5 @@ closeModalButton2.addEventListener("click", () => closeModal(modal2));
 
 openModalButton3.addEventListener("click", () => openModal(modal3));
 closeModalButton3.addEventListener("click", () => closeModal(modal3));
+
+// form

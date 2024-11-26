@@ -330,14 +330,13 @@
           <img src="./assets/teste7.png" class="w3-image w3-center" style="width: 50%" />
         </div>
         <p><strong>Envie-nos</strong> uma mensagem:</p>
-        <form action="/action_page.php" target="_blank">
+        <form action="/action_page.php" id="meuFormulario" target="_blank">
           <p>
             <input id="name-input" class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required
               name="Name" />
           </p>
           <p>
-            <input id="message-input" class="w3-input w3-padding-16 w3-border" type="text"
-              placeholder="Mensagem de sugestões" required name="Message" />
+            <textarea id="message-input" class="w3-input w3-padding-16 w3-border" placeholder="Mensagem de sugestões" required name="Message" rows="3"></textarea>
           </p>
           <p>
             <button onclick="enviarFormulario()" id="checkout-btn" class="w3-button w3-black" type="button">
